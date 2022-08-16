@@ -12,9 +12,11 @@
 bucket:
   # Enable/disable the open water bucket functionality
   waterbucket: true
+  # Limits the amount of liquid the water bucket can hold (-1 is basically infinite)
   waterbucket_limit: -1
   # Enable/disable the open lava bucket functionality
   lavabucket: true
+  # Limits the amount of liquid the lava bucket can hold (-1 is basically infinite)
   lavabucket_limit: -1
 
 # % will be replaced by the amount of buckets stored (BUCKET_WATER_AMOUNT, BUCKET_LAVA_AMOUNT)
