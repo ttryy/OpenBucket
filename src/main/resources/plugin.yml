@@ -7,5 +7,5 @@ main: xyz.ttryy.openwb.BucketPlugin
 
 commands:
   openbucket:
-    permission: openbucket.give
+    permission: openbucket.admin.give
     usage: /<command>

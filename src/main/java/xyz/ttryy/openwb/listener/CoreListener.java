@@ -2,6 +2,7 @@ package xyz.ttryy.openwb.listener;
 
 import org.bukkit.Material;
 import org.bukkit.block.Furnace;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -40,7 +41,9 @@ public class CoreListener implements Listener {
     @EventHandler
     public void interactEntity(PlayerInteractEntityEvent event){
         ItemStack item = event.getPlayer().getInventory().getItem(event.getHand());
-        if(item.getType() == Material.BUCKET){
+        if(item.getType() == Material.BUCKET &&
+                (event.getRightClicked().getType() == EntityType.COW || event.getRightClicked().getType() == EntityType.MUSHROOM_COW
+                || event.getRightClicked().getType() == EntityType.GOAT)){
             event.setCancelled(isItemOpenBucket(item));
         }
     }
