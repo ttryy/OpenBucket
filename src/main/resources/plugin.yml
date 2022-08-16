@@ -1,0 +1,11 @@
+name: OpenBucket
+version: alpha0.1
+author: ttryy
+api-version: 1.17
+
+main: xyz.ttryy.openwb.BucketPlugin
+
+commands:
+  openbucket:
+    permission: openbucket.give
+    usage: /<command>

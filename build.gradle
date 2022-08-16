@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'xyz.ttryy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+    repositories {
+        maven { url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/") }
+    }
+}
+
+dependencies {
+    compileOnly("org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

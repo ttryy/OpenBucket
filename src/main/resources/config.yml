@@ -1,0 +1,28 @@
+#   ____                   ____             _        _
+#  / __ \                 |  _ \           | |      | |
+# | |  | |_ __   ___ _ __ | |_) |_   _  ___| | _____| |_
+# | |  | | '_ \ / _ \ '_ \|  _ <| | | |/ __| |/ / _ \ __|
+# | |__| | |_) |  __/ | | | |_) | |_| | (__|   <  __/ |_
+#  \____/| .__/ \___|_| |_|____/ \__,_|\___|_|\_\___|\__|
+#        | |
+#        |_|
+#
+# by ttryy
+
+bucket:
+  # Enable/disable the open water bucket functionality
+  waterbucket: true
+  waterbucket_limit: -1
+  # Enable/disable the open lava bucket functionality
+  lavabucket: true
+  lavabucket_limit: -1
+
+# % will be replaced by the amount of buckets stored (BUCKET_WATER_AMOUNT, BUCKET_LAVA_AMOUNT)
+texts:
+  BUCKET_EMPTY: "Empty"
+  BUCKET_WATER_AMOUNT: "Water amount: %"
+  BUCKET_LAVA_AMOUNT: "Lava amount: %"
+  DEFAULT_NAME: "&5OpenBucket"
+  BUCKET_DEACTIVATED: "&cThis bucket type is currently deactivated and was reset."
+  BUCKET_STACKED: "&cThis item can't be used while stacked."
+  BUCKET_LIMIT: "&cThis bucket has reached it's limit and any liquid picked up will be lost."
