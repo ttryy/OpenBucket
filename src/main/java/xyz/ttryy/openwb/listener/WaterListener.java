@@ -58,8 +58,9 @@ public class WaterListener implements Listener {
                 }
 
                 Block block = player.getTargetBlockExact(4, FluidCollisionMode.SOURCE_ONLY);
-                if(block != null && block.getType() == Material.WATER
-                        && (block.getBlockData() instanceof Levelled && ((Levelled)block.getBlockData()).getLevel() == 0)){
+                if(block != null && ((block.getType() == Material.WATER
+                        && (block.getBlockData() instanceof Levelled && ((Levelled)block.getBlockData()).getLevel() == 0))
+                        || block.getType() == Material.BUBBLE_COLUMN)){
                     item.setType(Material.BUCKET);
                     player.playSound(block.getLocation(), Sound.ITEM_BUCKET_FILL, SoundCategory.BLOCKS, 1, 1);
                     event.setCancelled(false);
@@ -111,8 +112,9 @@ public class WaterListener implements Listener {
                 }
 
                 block = event.getBlockClicked().getRelative(event.getBlockFace());
-                if(block.getType() == Material.WATER
-                        && (block.getBlockData() instanceof Levelled && ((Levelled)block.getBlockData()).getLevel() == 0)){
+                if((block.getType() == Material.WATER
+                        && (block.getBlockData() instanceof Levelled && ((Levelled)block.getBlockData()).getLevel() == 0))
+                        || block.getType() == Material.BUBBLE_COLUMN){
                     changeWaterAmount(item, ++waterCount, player);
                     event.setCancelled(true);
                     block.setType(Material.AIR);
@@ -136,7 +138,7 @@ public class WaterListener implements Listener {
 
         Block block = event.getBlockClicked();
         boolean isWaterlogged = (block.getBlockData() instanceof Waterlogged && ((Waterlogged)block.getBlockData()).isWaterlogged());
-        if(block.getType() != Material.WATER
+        if(block.getType() != Material.WATER && block.getType() != Material.BUBBLE_COLUMN
             && !isWaterlogged){
             return;
         }
