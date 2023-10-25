@@ -57,7 +57,7 @@ public class GiveBucketCommand implements CommandExecutor {
         bucket.setItemMeta(meta);
 
         player.getInventory().addItem(bucket);
-        player.sendMessage(ChatColor.GREEN + "You received an OpenBucket.");
+        player.sendMessage(Text.BUCKET_GIVE.getText());
 
         return true;
     }

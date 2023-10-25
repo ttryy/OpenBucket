@@ -28,3 +28,4 @@ texts:
   BUCKET_DEACTIVATED: "&cThis bucket type is currently deactivated and was reset."
   BUCKET_STACKED: "&cThis item can't be used while stacked."
   BUCKET_LIMIT: "&cThis bucket has reached it's limit and any liquid picked up will be lost."
+  BUCKET_GIVE: "&aYou received an OpenBucket."
